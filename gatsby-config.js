@@ -1,7 +1,5 @@
 require("dotenv").config()
 
-console.log(process.env.CONTENTFUL_SPACE_ID)
-
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
