@@ -1,3 +1,12 @@
+require("dotenv").config()
+
+console.log(process.env.CONTENTFUL_SPACE_ID)
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+}
+
 module.exports = {
   siteMetadata: {
     title: `ATX Whiskey Blog`,
@@ -26,6 +35,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: contentfulConfig,
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
