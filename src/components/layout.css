@@ -200,7 +200,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: var(--main-font-family);
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -619,4 +619,97 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+/* extra things */
+:root {
+  --main-font-family: "Muli", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700,900|Rubik:300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+html {
+  font-family: var(--main-font-family);
+}
+
+header {
+  /* We use !important here to override
+  the inline styles just for this example.
+  in production code, avoid using it where
+  possible*/
+  background-color: cadetblue !important;
+}
+
+header div {
+  text-align: center;
+}
+
+header div h1 {
+  font-weight: 600;
+}
+
+.home {
+  text-align: center;
+}
+
+.home img {
+  margin: auto;
+}
+
+.blogpost {
+  font-size: 18px;
+  width: 35em;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+  margin-top: 48px;
+  font-family: var(--main-font-family);
+}
+
+img {
+  margin-bottom: 8px;
+}
+
+.tags {
+  margin-bottom: 24px;
+}
+
+.tags span.tag {
+  font-weight: bold;
+  margin-right: 8px;
+  background: cadetblue;
+  padding: 2px 12px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+}
+
+.blogpost p.body-text {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.8;
+  color: #929191;
+  font-weight: 300;
+}
+
+.blogpost a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.blogposts a {
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer {
+  margin-top: 120px;
+}
+
+.mgBtm__24 {
+  display: inline-block;
+  margin-bottom: 24px;
 }

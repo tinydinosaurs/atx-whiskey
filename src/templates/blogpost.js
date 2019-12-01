@@ -11,6 +11,8 @@ const BlogPost = ({ data }) => {
       <div className="blogpost">
         <h1>{title}</h1>
         <img alt={title} src={image.file.url} />
+
+        <p className="body-text">{body.body}</p>
         <div className="tags">
           {tags.map(tag => (
             <span className="tag" key={tag}>
@@ -18,7 +20,6 @@ const BlogPost = ({ data }) => {
             </span>
           ))}
         </div>
-        <p className="body-text">{body.body}</p>
         <Link to="/blogposts">View more posts</Link>
         <Link to="/">Back to Home</Link>
       </div>

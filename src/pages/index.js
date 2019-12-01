@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -17,9 +16,7 @@ const IndexPage = () => (
             maxWidth: `300px`,
             margin: "0 auto 1.45rem",
           }}
-        >
-          <Image />
-        </div>
+        ></div>
       </div>
       <Link to="/blogposts/">{"View all posts"}</Link>
     </div>
