@@ -1,9 +1,9 @@
-require("dotenv").config()
+require('dotenv').config();
 
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-}
+};
 
 module.exports = {
   siteMetadata: {
@@ -35,11 +35,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const BlogPost = ({ data }) => {
-  const { title, body, image, tags } = data.contentfulBlogPost
+  const { title, body, image, tags } = data.contentfulBlogPost;
   return (
     <Layout>
       <SEO title={title} />
@@ -14,20 +14,21 @@ const BlogPost = ({ data }) => {
 
         <p className="body-text">{body.body}</p>
         <div className="tags">
-          {tags.map(tag => (
-            <span className="tag" key={tag}>
-              {tag}
-            </span>
-          ))}
+          {tags &&
+            tags.map(tag => (
+              <span className="tag" key={tag}>
+                {tag}
+              </span>
+            ))}
         </div>
         <Link to="/blogposts">View more posts</Link>
         <Link to="/">Back to Home</Link>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -45,4 +46,4 @@ export const pageQuery = graphql`
       tags
     }
   }
-`
+`;
