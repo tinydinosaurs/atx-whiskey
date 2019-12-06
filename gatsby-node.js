@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+
 const path = require(`path`);
 const slash = require(`slash`);
 

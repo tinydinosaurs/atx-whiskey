@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/seo';
 
 const BlogPost = ({ data }) => {
@@ -10,7 +10,7 @@ const BlogPost = ({ data }) => {
       <SEO title={title} />
       <div className="blogpost">
         <h1>{title}</h1>
-        <img alt={title} src={image.file.url} />
+        {image && <img alt={title} src={image.file.url} />}
 
         <p className="body-text">{body.body}</p>
         <div className="tags">

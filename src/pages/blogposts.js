@@ -1,15 +1,14 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/Layout/Layout';
+import SEO from '../components/seo';
 
 const BlogPosts = ({ data }) => {
-  const blogPosts = data.allContentfulBlogPost.edges
+  const blogPosts = data.allContentfulBlogPost.edges;
   return (
     <Layout>
       <SEO title="Blog posts" />
-      <h1>{"Here is all the whiskey! ALL OF IT."}</h1>
+      <h1>{'Here is all the whiskey! ALL OF IT.'}</h1>
       <div className="blogposts">
         {blogPosts.map(({ node: post }) => (
           <div key={post.id}>
@@ -17,13 +16,13 @@ const BlogPosts = ({ data }) => {
           </div>
         ))}
         <span className="mgBtm__24" />
-        <Link to="/">{"Take me home"}</Link>
+        <Link to="/">{'Take me home'}</Link>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogPosts
+export default BlogPosts;
 
 export const query = graphql`
   query BlogPostsPageQuery {
@@ -46,4 +45,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
